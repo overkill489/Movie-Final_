@@ -10,10 +10,18 @@ const App = () => {
     <Router>
       <div className="app">
         <Navbar />
-        <MovieList type="popular" title="Popular Movies" />
-        <MovieList type="top_rated" title="Top Rated Movies" />
-        <MovieList type="upcoming" title="Upcoming Movies" />
         <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <MovieList type="popular" title="Popular Movies" />
+                <MovieList type="top_rated" title="Top Rated Movies" />
+                <MovieList type="upcoming" title="Upcoming Movies" />
+              </>
+            }
+          />
+
           <Route path="/movies/:id" element={<MovieDetails />} />
         </Routes>
       </div>
