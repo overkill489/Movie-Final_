@@ -5,6 +5,7 @@ import MovieList from "./components/NavBar/movie-list/MovieList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MovieDetails from "./components/NavBar/movie-list/MovieDetails";
 import SearchBar from "./assets/SearchBar";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
 
           <Route path="/movies/:id" element={<MovieDetails />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

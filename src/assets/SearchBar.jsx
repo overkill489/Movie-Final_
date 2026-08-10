@@ -28,7 +28,7 @@ function Search() {
         />
       </div>
       <div className="search-result">
-        {data.map((movie) => (
+        {data.map((movie ) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
