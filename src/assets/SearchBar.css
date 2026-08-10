@@ -1,24 +1,15 @@
 .search-top {
-    width: 30%;
-}
-
-.search {
   width: 100%;
 }
 
-.search input {
-    width: 100%;
-    padding: 15px 25px;
-    font-size: 18px;
+.search {
+  width: 30%;
 }
 
 .search-result {
-    width: 30%;
-    margin-top: 10px;
-}
-
-.search-result div {
-    width: 100%;
-    padding: 10px 25px;
-    background-color: gray;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
 }

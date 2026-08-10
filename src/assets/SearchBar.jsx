@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SearchBar.css";
+import MovieCard from "../components/NavBar/movie-list/Moviecard.jsx";
 
 function Search() {
   const handleSearch = async (value) => {
@@ -27,8 +28,8 @@ function Search() {
         />
       </div>
       <div className="search-result">
-        {data.map((d, i) => (
-          <div key={i}>{d.name}</div>
+        {data.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
     </div>
