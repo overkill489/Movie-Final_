@@ -2,3 +2,9 @@
   display: grid;
   grid-template-rows: 80px auto;
 }
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

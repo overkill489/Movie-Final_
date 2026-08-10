@@ -34,8 +34,6 @@ const MovieDetails = () => {
     <main id="movies_main">
       <Link to="/" className="movie__link">
         <FontAwesomeIcon icon={faArrowLeft} /> 
-      </Link>
-      <Link to="/" className="movie__link">
        <h2 className="movie__selected--title--top">Movies</h2>
       </Link>
       <img

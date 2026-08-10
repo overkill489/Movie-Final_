@@ -1,16 +1,22 @@
-import React from 'react';
-import './Navbar.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
-  return (
-    <nav className='navbar'>
-        <h1 className='navbar__title'>Movie</h1>
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
-        <div className='navbar__links'>
-            <a href="#popular">Popular</a>
-            <a href="#top_rated">Top rated</a>
-            <a href="#upcoming">Upcoming</a>
-        </div>
+
+
+  return (
+    <nav className="navbar">
+      <h1 className="navbar__title">Movie</h1>
+
+      <div className="navbar__links">
+        <a href="#popular">Popular</a>
+        <a href="#top_rated">Top rated</a>
+        <a href="#upcoming">Upcoming</a>
+      </div>
     </nav>
   );
 };
