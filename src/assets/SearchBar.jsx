@@ -2,22 +2,20 @@ import React, { useEffect, useState } from "react";
 import "./SearchBar.css";
 
 function Search() {
-  useEffect(() => {
-    fetch("http://www.omdbapi.com/?i=tt3896198&apikey=8660b06b")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        setFilterData(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+  const handleSearch = async (value) => {
+    if (!value.trim()) {
+      setData([]);
+      return;
+    }
+
+    const response = await fetch(
+      `https://api.themoviedb.org/3/search/movie?api_key=e50eb4b021e5d0fe1f6cc5e3ff2dc49f&query=${encodeURIComponent(value)}`,
+    );
+    const result = await response.json();
+    setData(result.results || []);
+  };
 
   const [data, setData] = useState([]);
-  const [filterData, setFilterData] = useState([]);
-  const handleSearch = (value) => {
-    const res = filterData.filter((f) => f.title.toLowerCase().includes(value));
-    setData(res);
-  };
 
   return (
     <div className="search-top">
