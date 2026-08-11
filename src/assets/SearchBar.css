@@ -3,7 +3,10 @@
 }
 
 .search {
-  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  width: 100%;
 }
 
 .search-result {
